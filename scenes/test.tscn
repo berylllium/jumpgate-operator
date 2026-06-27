@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://1i22kqtl4y6o"]
+
+[ext_resource type="PackedScene" uid="uid://cwq3q2twwlha1" path="res://models/test/test.glb" id="1_kde15"]
+[ext_resource type="PackedScene" uid="uid://4kyl0hfd06bt" path="res://prefabs/player.tscn" id="2_bl13t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e8dpg"]
+sky_top_color = Color(0.462538, 0.6067846, 0.8299127, 1)
+sky_horizon_color = Color(0.52981466, 0.6395785, 0.7478433, 1)
+
+[sub_resource type="Sky" id="Sky_lm0xf"]
+sky_material = SubResource("ProceduralSkyMaterial_e8dpg")
+
+[sub_resource type="Environment" id="Environment_r3j4i"]
+background_mode = 2
+sky = SubResource("Sky_lm0xf")
+
+[node name="test" unique_id=1262474438 instance=ExtResource("1_kde15")]
+
+[node name="player" parent="." index="0" unique_id=1016393664 instance=ExtResource("2_bl13t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1153343, 0)
+look_sensitivity = 0.004
+walk_speed = 3.0
+sprint_speed = 5.0
+headbob_move_amount = 0.03
+headbob_frequency = 2.8
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2" unique_id=751964386]
+transform = Transform3D(0.77358663, 0.5260339, -0.3533442, 0, 0.55759734, 0.83011156, 0.6336906, -0.6421632, 0.43134984, 0, 8.543985, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3" unique_id=535749244]
+environment = SubResource("Environment_r3j4i")

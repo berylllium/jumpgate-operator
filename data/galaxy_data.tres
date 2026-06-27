@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GalaxyData" format=3 uid="uid://co2k8au41lhhu"]
+
+[ext_resource type="Script" uid="uid://bqm844dg2q4gl" path="res://scripts/galaxy.gd" id="1_8hnir"]
+
+[resource]
+script = ExtResource("1_8hnir")
+star_count = 115
+metadata/_custom_type_script = "uid://bqm844dg2q4gl"
